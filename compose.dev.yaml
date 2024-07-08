@@ -1,0 +1,28 @@
+version: "1"
+
+x-port-bindings:
+  BACKEND_PORTS: &backend_ports 3001:3001
+
+services:
+  backend:
+    build:
+      context: apps/backend
+      target: development
+    volumes:
+      - ./apps/backend/src:/backend/src
+      - backend-cache:/backend/target
+    ports:
+      - *backend_ports
+
+volumes:
+  backend-cache: {}
+
+  # frontend:
+  #   image: app:frontend
+  #   build:
+  #     context: .
+  #     dockerfile: ./apps/frontend/Dockerfile
+  #     target: development
+  #   volumes:
+  #     - .:/app
+  #     - /app/node_modules

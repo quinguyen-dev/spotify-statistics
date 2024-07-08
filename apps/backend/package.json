@@ -1,0 +1,11 @@
+{
+  "name": "backend",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "cargo:build": "cargo build",
+    "cargo:check": "cargo check",
+    "cargo:run": "cargo run"
+  }
+}
+

@@ -1,0 +1,10 @@
+**/.gitignore
+Dockerfile
+.dockerignore
+**/.idea
+**/.git
+docker-compose*.yaml
+
+**/node_modules
+**/.prisma
+**/target
